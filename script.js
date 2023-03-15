@@ -9,6 +9,14 @@ const app = Vue.createApp({
 
     methods: {
 
+    },
+
+    created() {
+        axios
+        .get("http://localhost:8888/esercizio/php-dischi-json/get-list.php")
+        .then((response) => {
+            console.log(response.data)
+        })
     }
 });
 
